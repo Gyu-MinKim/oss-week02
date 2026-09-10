@@ -1,4 +1,4 @@
-# oss-week02 — Node, JavaScript, npm
+김규민 / Gyu-Min Kim
 
 Week 2 hands-on for *Open Source Software Design and Lab* (Kwangwoon Univ., 2026).
 
