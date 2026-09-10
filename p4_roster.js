@@ -31,7 +31,7 @@ console.log("80 or more:", highScoreNames);
 // console.log("per dept:", ...);
 const counts = {};
 
-students.forEach((s) => counts[s.dept] = (counts[s.dept] ?? 0) + 1)
+students.forEach((s) => counts[s.dept] = (counts[s.dept] ?? 0) + 1);
 console.log("per dept: ", counts);
 
 // (c) Ranking by score, one line each: "1. Soyeon (CS) 97"

@@ -15,6 +15,8 @@
 import fs from "node:fs";
 // TODO: import { tokenize, countWords, topN } from ...
 
+import { tokenize, countWords, topN } from "./utils.js";
+
 const path = process.argv[2];
 const text = fs.readFileSync(path, "utf8");
 
@@ -23,6 +25,11 @@ const counts = countWords(words);
 
 // TODO: print "<total> words, <distinct> distinct"
 //       Object.keys(counts).length is the number of distinct words.
+console.log(`${words.length} words, ${Object.keys(counts).length} distinct`);
+
 
 // TODO: print the top 5 as "word count", one per line
 //       topN(counts, 5) returns [["code", 9], ["the", 7], ...]
+const topNs = topN(counts, 5);
+
+topNs.forEach((n) => console.log(n[0].padEnd(8), n[1])); //출력 양식을 맞추기 위하여 padEnd 사용함
